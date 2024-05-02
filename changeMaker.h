@@ -1,9 +1,9 @@
-//
-// Created by Ahad Ibrahimi on 4/27/23.
-//
 
 #ifndef ASSIGNMENT_4_CHANGEMAKER_H
 #define ASSIGNMENT_4_CHANGEMAKER_H
+
+#include <iostream>
+#include <cmath>
 
 int* greedyChangeMaker(double amount);
 
@@ -22,4 +22,4 @@ int roundToInt (double);
 
 
 
-#endif //ASSIGNMENT_4_CHANGEMAKER_H
+#endif //COMP318_Proj3_CHANGEMAKER_H

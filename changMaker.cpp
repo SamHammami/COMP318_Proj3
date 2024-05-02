@@ -1,9 +1,6 @@
-//
-// Created by Ahad Ibrahimi on 4/27/23.
-//
 
-#include <iostream>
-#include <cmath>
+
+
 #include "changeMaker.h"
 
 using namespace std;
