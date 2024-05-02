@@ -19,7 +19,6 @@ public:
 };
 
 
-
 ChangeStruct dynamicChangeMaker(double amount);
 
 int roundToInt (double);
