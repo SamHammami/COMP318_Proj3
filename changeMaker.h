@@ -5,20 +5,24 @@
 #include <iostream>
 #include <cmath>
 
+using namespace std;
+
+
 int* greedyChangeMaker(double amount);
 
 
 class ChangeStruct {
 public:
-    int totalCoin;
+    int totalBills;
     int solution[5];
 
 };
 
+
+
 ChangeStruct dynamicChangeMaker(double amount);
 
 int roundToInt (double);
-
 
 
 

@@ -1,6 +1,4 @@
 
-
-
 #include "changeMaker.h"
 
 using namespace std;
@@ -62,13 +60,13 @@ ChangeStruct dynamicChangeMaker(double amount) {
     int numCoins = sizeof(coinValue) / sizeof(coinValue[0]);
 
     ChangeStruct* memo = new ChangeStruct[cents + 1];
-    memo[0].totalCoin = 0;
+    memo[0].totalBills = 0;
 
     for (int i = 1; i <= cents; i++) {
-        memo[i].totalCoin = INT_MAX;
+        memo[i].totalBills = INT_MAX;
         for (int j = 0; j < numCoins; j++) {
-            if (i >= coinValue[j] && memo[i - coinValue[j]].totalCoin + 1 < memo[i].totalCoin) {
-                memo[i].totalCoin = memo[i - coinValue[j]].totalCoin + 1;
+            if (i >= coinValue[j] && memo[i - coinValue[j]].totalBills + 1 < memo[i].totalBills) {
+                memo[i].totalBills = memo[i - coinValue[j]].totalBills + 1;
                 for (int k = 0; k < numCoins; k++) {
                     memo[i].solution[k] = memo[i - coinValue[j]].solution[k];
                 }
