@@ -9,11 +9,10 @@ using namespace std;
 
 class ChangePlan {
 public:
-    int totalBills;
-    int solution[5];
+    int totalBills; // The total number of bills needed for the given amount.
+    int solution[6]; //
 };
 int roundToInt (double);
-
 
 int* greedyPlan(double amount);
 ChangePlan dynamicPlan(double amount);
