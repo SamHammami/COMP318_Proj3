@@ -1,4 +1,4 @@
 # ninja log v5
-2	427	7363331680110275	CMakeFiles/Assignment_4.dir/main.cpp.obj	1933d8923c5e6083
-8	514	7363331680970371	CMakeFiles/Assignment_4.dir/changMaker.cpp.obj	d6fa4aec1763d569
-514	763	7363331683422446	Assignment_4.exe	4e125973b82e6be8
+1	501	7363883492057842	CMakeFiles/COMP318_Proj3.dir/main.cpp.obj	c4a5a6dc7d0e568d
+7	515	7363883492258037	CMakeFiles/COMP318_Proj3.dir/changeMaker.cpp.obj	c1fbae4d9f7b0a9b
+515	881	7363883495778141	COMP318_Proj3.exe	11b11f9cbf176369

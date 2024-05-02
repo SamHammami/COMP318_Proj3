@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: Assignment_4
+# Project: COMP318_Proj3
 # Configurations: Debug
 # =============================================================================
 
@@ -41,43 +41,43 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/houss/Desktop/1_COMP$ 318_Algorithms/W14/Project$ 3/COMP318_Proj3/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Assignment_4
+# Object build statements for EXECUTABLE target COMP318_Proj3
 
 
 #############################################
-# Order-only phony target for Assignment_4
+# Order-only phony target for COMP318_Proj3
 
-build cmake_object_order_depends_target_Assignment_4: phony || CMakeFiles/Assignment_4.dir
+build cmake_object_order_depends_target_COMP318_Proj3: phony || CMakeFiles/COMP318_Proj3.dir
 
-build CMakeFiles/Assignment_4.dir/main.cpp.obj: CXX_COMPILER__Assignment_4_unscanned_Debug C$:/Users/houss/Desktop/1_COMP$ 318_Algorithms/W14/Project$ 3/COMP318_Proj3/main.cpp || cmake_object_order_depends_target_Assignment_4
-  DEP_FILE = CMakeFiles\Assignment_4.dir\main.cpp.obj.d
+build CMakeFiles/COMP318_Proj3.dir/main.cpp.obj: CXX_COMPILER__COMP318_Proj3_unscanned_Debug C$:/Users/houss/Desktop/1_COMP$ 318_Algorithms/W14/Project$ 3/COMP318_Proj3/main.cpp || cmake_object_order_depends_target_COMP318_Proj3
+  DEP_FILE = CMakeFiles\COMP318_Proj3.dir\main.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Assignment_4.dir
-  OBJECT_FILE_DIR = CMakeFiles\Assignment_4.dir
+  OBJECT_DIR = CMakeFiles\COMP318_Proj3.dir
+  OBJECT_FILE_DIR = CMakeFiles\COMP318_Proj3.dir
 
-build CMakeFiles/Assignment_4.dir/changMaker.cpp.obj: CXX_COMPILER__Assignment_4_unscanned_Debug C$:/Users/houss/Desktop/1_COMP$ 318_Algorithms/W14/Project$ 3/COMP318_Proj3/changMaker.cpp || cmake_object_order_depends_target_Assignment_4
-  DEP_FILE = CMakeFiles\Assignment_4.dir\changMaker.cpp.obj.d
+build CMakeFiles/COMP318_Proj3.dir/changeMaker.cpp.obj: CXX_COMPILER__COMP318_Proj3_unscanned_Debug C$:/Users/houss/Desktop/1_COMP$ 318_Algorithms/W14/Project$ 3/COMP318_Proj3/changeMaker.cpp || cmake_object_order_depends_target_COMP318_Proj3
+  DEP_FILE = CMakeFiles\COMP318_Proj3.dir\changeMaker.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Assignment_4.dir
-  OBJECT_FILE_DIR = CMakeFiles\Assignment_4.dir
+  OBJECT_DIR = CMakeFiles\COMP318_Proj3.dir
+  OBJECT_FILE_DIR = CMakeFiles\COMP318_Proj3.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target Assignment_4
+# Link build statements for EXECUTABLE target COMP318_Proj3
 
 
 #############################################
-# Link the executable Assignment_4.exe
+# Link the executable COMP318_Proj3.exe
 
-build Assignment_4.exe: CXX_EXECUTABLE_LINKER__Assignment_4_Debug CMakeFiles/Assignment_4.dir/main.cpp.obj CMakeFiles/Assignment_4.dir/changMaker.cpp.obj
+build COMP318_Proj3.exe: CXX_EXECUTABLE_LINKER__COMP318_Proj3_Debug CMakeFiles/COMP318_Proj3.dir/main.cpp.obj CMakeFiles/COMP318_Proj3.dir/changeMaker.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Assignment_4.dir
+  OBJECT_DIR = CMakeFiles\COMP318_Proj3.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = Assignment_4.exe
-  TARGET_IMPLIB = libAssignment_4.dll.a
-  TARGET_PDB = Assignment_4.exe.dbg
+  TARGET_FILE = COMP318_Proj3.exe
+  TARGET_IMPLIB = libCOMP318_Proj3.dll.a
+  TARGET_PDB = COMP318_Proj3.exe.dbg
 
 
 #############################################
@@ -105,7 +105,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build Assignment_4: phony Assignment_4.exe
+build COMP318_Proj3: phony COMP318_Proj3.exe
 
 # =============================================================================
 # Folder targets.
@@ -115,7 +115,7 @@ build Assignment_4: phony Assignment_4.exe
 #############################################
 # Folder: C:/Users/houss/Desktop/1_COMP 318_Algorithms/W14/Project 3/COMP318_Proj3/cmake-build-debug
 
-build all: phony Assignment_4.exe
+build all: phony COMP318_Proj3.exe
 
 # =============================================================================
 # Built-in targets

@@ -1,6 +1,6 @@
 
-#ifndef ASSIGNMENT_4_CHANGEMAKER_H
-#define ASSIGNMENT_4_CHANGEMAKER_H
+#ifndef COMP318_Proj3_CHANGEMAKER_H
+#define COMP318_Proj3_CHANGEMAKER_H
 
 #include <iostream>
 #include <cmath>
