@@ -7,11 +7,13 @@ using namespace std;
  * Description: This function implements a greedy algorithm to make change for a given amount
  *              using a set of coin denominations. It returns the number of coins of each
  *              denomination required to make the change.
+ *
  * Parameters:  amount of type double - the amount of money to make change for.
+ *
  * Returns:     a pointer to an array of ints. The array contains the number of each type
  *              of coin required to make change for the given amount.
  */
-int* greedyChangeMaker(double amount) {
+int* greedyPlan(double amount) {
 
     amount = roundToInt(amount);
     int n = 5;
@@ -46,20 +48,22 @@ int* greedyChangeMaker(double amount) {
 /**
  * Description: This function implements a dynamic programming algorithm to find the
  *              minimum number of coins required to make change for a given amount using
- *              a set of coin denominations. It returns a ChangeStruct object that contains
+ *              a set of coin denominations. It returns a ChangePlan object that contains
  *              the minimum number of coins required, as well as the specific coin
  *              denominations that should be used to achieve that minimum.
+ *
  * Parameters:  amount of type double - the amount of money to make change for.
- * Returns:     a ChangeStruct object that contains the minimum number of coins required to
+ *
+ * Returns:     a ChangePlan object that contains the minimum number of coins required to
  *              make change for the given amount, as well as the specific coin denominations
  *              that should be used.
  */
-ChangeStruct dynamicChangeMaker(double amount) {
+ChangePlan dynamicPlan(double amount) {
     int cents = round(amount * 100);
     int coinValue[] = {1, 7, 30, 84, 235};
     int numCoins = sizeof(coinValue) / sizeof(coinValue[0]);
 
-    ChangeStruct* memo = new ChangeStruct[cents + 1];
+    ChangePlan* memo = new ChangePlan[cents + 1];
     memo[0].totalBills = 0;
 
     for (int i = 1; i <= cents; i++) {
@@ -75,7 +79,7 @@ ChangeStruct dynamicChangeMaker(double amount) {
         }
     }
 
-    ChangeStruct result = memo[cents];
+    ChangePlan result = memo[cents];
     delete[] memo;
 
     return result;
@@ -86,7 +90,9 @@ ChangeStruct dynamicChangeMaker(double amount) {
  *              integer by multiplying it by 100, rounding to the nearest integer,
  *              and then dividing the result by 100. The resulting integer value
  *              is then returned.
+ *
  * Parameters:  num of type double - a decimal number to be rounded to the nearest integer.
+ *
  * Returns:     an int representing the rounded integer value of the input num.
  */
 

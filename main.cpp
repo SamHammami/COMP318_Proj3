@@ -7,12 +7,13 @@ using namespace std;
 int main() {
 
     double amount;
+
     do {
         cout << "Enter amount in dollars (negative to exit): ";
         cin >> amount;
         if (amount < 0) break;
 
-        int *A = greedyChangeMaker(amount);
+        int *A = greedyPlan(amount);
 
         cout << "Number of coins in Greedy Algorithm:\n";
         cout << "  1 cent: " << A[0] << endl;
@@ -21,7 +22,7 @@ int main() {
         cout << "  84 cents: " << A[3] << endl;
         cout << "  235 cents: " << A[4] << endl;
 
-        ChangeStruct result = dynamicChangeMaker(amount);
+        ChangePlan result = dynamicPlan(amount);
 
         cout << "Number of coins in Optimal Algorithm:\n";
         cout << "  1 cent: " << result.solution[0] << endl;
