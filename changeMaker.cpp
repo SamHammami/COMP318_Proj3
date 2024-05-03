@@ -3,7 +3,7 @@
 
 
 array<int, 6> greedyPlan(int taxAmount) {
-
+    // Array of denominations
     const int denominations[6] = {95000, 32001, 5001, 701, 101, 1} ;
 
     array<int, 6> plan = {0}; // Initialize all elements to 0
@@ -17,7 +17,9 @@ array<int, 6> greedyPlan(int taxAmount) {
 }
 
 ChangePlan dynamicPlan(int taxAmount) {
+    // Array of denominations
     const int denominations[6] = {95000, 32001, 5001, 701, 101, 1};
+    // Vector of ChangePlan objects
     vector<ChangePlan> dynaProg(taxAmount + 1);
 
     // Base case

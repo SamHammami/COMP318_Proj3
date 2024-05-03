@@ -65,7 +65,7 @@ void displayDynamicApproach(int taxAmount, const array <int, 6> &denominations) 
     int subtotalDynamic = 0;
     string storeDynamBills;
     // Loop through the dynamic result
-    for (size_t i = 0; i < dynamicResult.plan.size(); ++i) {
+    for (size_t i = 0; i < dynamicResult.plan.size(); ++i) { //dynamicResult.plan.size()= 6 -> from dynamicPlan function
         // Display: Bills x Number of Bills = Total (Dynamic)
         int bills = denominations[i];
         int num = dynamicResult.plan[i];
@@ -85,7 +85,6 @@ void displayDynamicApproach(int taxAmount, const array <int, 6> &denominations) 
     cout << endl << "Total number of bills needed: " << storeDynamBills << " = " << dynamicResult.totalBills << endl;
 
 }
-
 
 /*-------------------------------------------------Main Function-------------------------------------------------*/
 int main() {

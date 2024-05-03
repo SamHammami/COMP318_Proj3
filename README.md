@@ -24,7 +24,7 @@ Developed by Sam Hammami '25
 ****************************
  ```mermaid
 graph TD;
-    binaryTreeClass<-->binarySearchTreeClass;
+    binaryTreeClas<-->binarySearchTreeClass;
     binarySearchTreeClass<-->balancedBinarySearchTreeClass;
     balancedBinarySearchTreeClass-->Main.cpp;
 ```
