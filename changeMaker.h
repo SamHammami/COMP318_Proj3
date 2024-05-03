@@ -3,29 +3,24 @@
 #define COMP318_Proj3_CHANGEMAKER_H
 
 #include <iostream>
-#include <cmath>
+#include <array> // For Greedy Programming
+#include <vector> // For Dynamic Programming
+#include <cmath> // For INT_MAX
+#include <string> // For string manipulation
+#include <iomanip> // For setw
+
 
 using namespace std;
 
 class ChangePlan {
+    // Class to store the plan of bills and the total number of bills
 public:
-    int totalBills; // The total number of bills needed for the given amount.
-    int solution[6]; //
+    array<int, 6> plan; // The plan of bills
+    int totalBills; // Total number of bills
 };
-int roundToInt (double);
 
-int* greedyPlan(double amount);
-ChangePlan dynamicPlan(double amount);
-
-/**
- * Computes the optimal change plan using dynamic programming.
- *
- * @param amount The total amount of money to compute change for.
- * @return A ChangePlan object containing:
- *   - totalBills: The total number of bills needed for the given amount.
- *   - solution: An array of 5 integers representing the number of each denomination required.
- */
-
+array<int, 6> greedyPlan(int taxAmount);
+ChangePlan dynamicPlan(int taxAmount);
 
 
 #endif //COMP318_Proj3_CHANGEMAKER_H
