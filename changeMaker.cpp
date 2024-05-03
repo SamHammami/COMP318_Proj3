@@ -2,13 +2,10 @@
 #include "changeMaker.h"
 
 
-array<int, 6> greedyPlan(int taxAmount) {
-    // Array of denominations
-    const int denominations[6] = {95000, 32001, 5001, 701, 101, 1} ;
-
+array<int, 6> greedyPlan(int taxAmount, int[] denominations) {
     array<int, 6> plan = {0}; // Initialize all elements to 0
 
-    for (int i = 0; i < 6; ++i) {
+    for (int i = 0; i < denominations.size(); ++i) {
         plan[i] = taxAmount / denominations[i];
         taxAmount %= denominations[i];
     }
@@ -16,9 +13,7 @@ array<int, 6> greedyPlan(int taxAmount) {
     return plan;
 }
 
-ChangePlan dynamicPlan(int taxAmount) {
-    // Array of denominations
-    const int denominations[6] = {95000, 32001, 5001, 701, 101, 1};
+ChangePlan dynamicPlan(int taxAmount, int[] denominations) {
     // Vector of ChangePlan objects
     vector<ChangePlan> dynaProg(taxAmount + 1);
 
@@ -29,7 +24,7 @@ ChangePlan dynamicPlan(int taxAmount) {
     for (int i = 1; i <= taxAmount; ++i) {
         dynaProg[i].totalBills = INT_MAX;
 
-        for (int j = 0; j < 6; ++j) {
+        for (int j = 0; j < denominations.size(); ++j) {
             if (i >= denominations[j]) {
                 ChangePlan candidate = dynaProg[i - denominations[j]];
                 candidate.totalBills++;

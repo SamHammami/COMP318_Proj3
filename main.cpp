@@ -15,7 +15,7 @@ using namespace std;
 void displayGreedyApproach(int taxAmount, const array <int, 6> &denominations) {
 
     // Get the greedy plan
-    array<int, 6> greedyResult = greedyPlan(taxAmount);
+    array<int, 6> greedyResult = greedyPlan(taxAmount, denominations);
 
     // Start displaying the greedy result
     cout << "Plan 1: The Greedy Approach" << endl;
@@ -54,7 +54,7 @@ void displayGreedyApproach(int taxAmount, const array <int, 6> &denominations) {
 void displayDynamicApproach(int taxAmount, const array <int, 6> &denominations) {
 
     // Get the dynamic plan
-    ChangePlan dynamicResult = dynamicPlan(taxAmount);
+    ChangePlan dynamicResult = dynamicPlan(taxAmount, denominations);
 
     // Start displaying the dynamic result
     cout << "Plan 2: The Dynamic Programming Approach" << endl;
