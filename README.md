@@ -1,8 +1,8 @@
 
 #  *----------------  Wheaton College, MA - Spring 2024   ---------------* <br><br><br>
 
-## COMP 318 Algorithms - Project 2 
-### Description - ***AVL Trees***
+## COMP 318 Algorithms - Project 3 
+### Description - ***Greedy & Dynamic Programming***
 This project introduces an implementation of a Balanced Binary Search Tree (BST), specifically an AVL tree, which 
 self-balances to maintain optimal search, insert, and delete operations times.The program offers multiple options to 
 manage a balanced BST effectively, leveraging various algorithms and data structures, including tree nodes, rotation mechanisms, 
@@ -24,8 +24,8 @@ Developed by Sam Hammami '25
 ****************************
  ```mermaid
 graph TD;
-    binaryTreeClass-->binarySearchTreeClass;
-    binarySearchTreeClass-->balancedBinarySearchTreeClass;
+    binaryTreeClass<-->binarySearchTreeClass;
+    binarySearchTreeClass<-->balancedBinarySearchTreeClass;
     balancedBinarySearchTreeClass-->Main.cpp;
 ```
 ##### This project contains multiple files that divide the workload.

@@ -93,7 +93,7 @@ int main() {
 
     cout << "Welcome to the IR$ of Banana Republic!" << endl << endl;
 
-    string name = "Houssam";
+    string name = "Poor Patrick"; //Houssam
 //    string name;
 //    cout << "Please enter your name below! " << endl;
 //    cout << "My Name is";
