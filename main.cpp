@@ -9,7 +9,7 @@
 using namespace std;
 
 
-/*---------------------------------Display Greedy and Dynamic Approach---------------------------------------*/
+/*--------------------------------Display (Greedy) & (Dynamic) Approach------------------------------------*/
 
                                 /*------- Greedy Approach -------*/
 void displayGreedyApproach(int taxAmount, const array <int, 6> &denominations) {
@@ -98,7 +98,7 @@ int main() {
 //    cout << "My Name is";
 //    getline(cin, name);
 
-//    int taxAmount = 96003; // Test case: no= 303, no=1003, no=5003, 7003, 32003, 95003, 96003 (for dynamic)
+//    int taxAmount = 96003; // Test case: no= 303, no=1003, no=5003, 7003, 32003, 95003, 96003 (for dynamic), 3333333
     int taxAmount;
     cout << endl << "What is your tax $$$ due? " << endl;
     cout << "My Tax Amount Due = $";

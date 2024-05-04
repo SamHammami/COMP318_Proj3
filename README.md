@@ -77,6 +77,44 @@ Click the run button - or - Shift + F10
 
 ```
 
+
+sample 1
+
+
+Sample 2
+
+
+
+Sample 3
+
+
+
+
+We could see that always dp < greedy
+
+
+Which result that dp is always more efficient but sometimes greedy is the same as dp
+
+we could see the difference between the two algorithms in larger numbers where dp is more efficient than greedy
+
+
+
+
+Time complexity
+
+
+Space complexity
+
+
+
+
+Time efficiency
+Space efficiency
+Which approach is better? Why? Is it always the case?
+
+```
+
+```
 .                        ***     Welcome to The AVL Trees World     ***                    .
 
 

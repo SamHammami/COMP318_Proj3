@@ -19,8 +19,8 @@ public:
     int totalBills; // Total number of bills
 };
 
-array<int, 6> greedyPlan(int taxAmount);
-ChangePlan dynamicPlan(int taxAmount);
+array<int, 6> greedyPlan(int taxAmount, const array<int, 6> &denominations);
+ChangePlan dynamicPlan(int taxAmount, array<int, 6> denominations);
 
 
 #endif //COMP318_Proj3_CHANGEMAKER_H
