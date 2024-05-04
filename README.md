@@ -199,7 +199,7 @@ List of authors/contributors’ names and contact info:
 
 * Discussing the project with Prof. Tony - May 02, 2024
 
-* Solved nodeType Typo issue - April 09, 2024
+* Solved nodeType Typo issue - April , 2024
 
 * Completed the 2nd Class (BST) - April 10, 2024
 
