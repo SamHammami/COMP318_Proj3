@@ -20,7 +20,7 @@ and balanceOurTree factor calculations.
 Developed by Sam Hammami '25
 
 ****************************
-**Inheritance diagram:**
+**Inheritance diagram bla bla:**
 ****************************
  ```mermaid
 graph TD;
@@ -33,10 +33,10 @@ graph TD;
     This file is used to test the AVL Trees implementation. It creates a tree, inserts nodes, displays the tree, and deletes nodes. 
     It also displays the tree after deletion.
 
-- AVLtrees.cpp:<br>
+- changeMaker.cpp:<br>
     This file is used to create the AVL Trees Object Data Structure which holds the nodes of the tree and the methods to manipulate the tree.
 
-- AVLtrees.h:<br>
+- changeMaker.h:<br>
   This is the header file for the AVLtrees.cpp file. It contains the three classes hierarchy (binaryTreeClass, binarySearchTreeClass, balancedBinarySearchTreeClass) and the methods' prototypes. <br>
 
 ****************************
@@ -44,10 +44,13 @@ graph TD;
 ## Getting Started
 
 #### This program uses the following libraries:
-- #include \<iostream>
-- #include \<queue>
-- #include \<iomanip>
-- #include \<cmath>
+
+- #include <iostream> // For input-output
+- #include <array>    // For Greedy Programming
+- #include <vector>   // For Dynamic Programming
+- #include <cmath>    // For INT_MAX
+- #include <string>   // For string manipulation
+- #include <iomanip>  // For setw
 
 #### CMake Minimum version
 - cmake_minimum_required(VERSION 3.27)
@@ -78,8 +81,52 @@ Click the run button - or - Shift + F10
 ```
 
 
-sample 1
+Sample 1
+***     Welcome to the IR$ of Banana Republic!     ***
 
+Please enter your name below!
+My Name is Poor Patrick
+
+What is your tax $$$ due?
+My Tax Amount Due = $96003
+
+---------------------------------------------------------------
+Plan 1: The Greedy Approach
+Tax Due: $96003
+                Bills         Num                   Subtotal
+                $95000   x    1     = $95000        $95000
+                $32001   x    0     = $0            $95000
+                $5001    x    0     = $0            $95000
+                $701     x    1     = $701          $95701
+                $101     x    2     = $202          $95903
+                $1       x    100   = $100          $96003
+
+Total number of bills needed: 1 + 0 + 0 + 1 + 2 + 100 = 104
+*-----------------------------*****---------------------------*
+Plan 2: The Dynamic Programming Approach
+Tax Due: $96003
+                Bills         Num                   Subtotal
+                $95000   x    0     = $0            $0
+                $32001   x    3     = $96003        $96003
+                $5001    x    0     = $0            $96003
+                $701     x    0     = $0            $96003
+                $101     x    0     = $0            $96003
+                $1       x    0     = $0            $96003
+
+Total number of bills needed: 0 + 3 + 0 + 0 + 0 + 0 = 3
+---------------------------------------------------------------
+Which payment plan do you want to choose (1 or 2)?
+Plan:2
+
+---------------------------------------------------------------
+Dear  Poor Patrick,
+
+Thank you for paying your tax ON TIME, you have chosen Plan 2!
+Remember that IR$ of Banana Republic is always here for you.
+
+Best Regards,
+IR$ Support Team
+---------------------------------------------------------------
 
 Sample 2
 
@@ -120,155 +167,9 @@ Which approach is better? Why? Is it always the case?
 
 --------------------------------------------------------------------------------------------------
 
-Inserting: a b c d e f g h i j k l m n o p q r s t u v w x y z
-
-Loading the tree...
-
-                   z
-                /
-              y
-           /
-         x
-           \
-                   w
-                /
-              v
-                \
-                   u
-      /
-    t
-      \
-              s
-           /
-         r
-           \
-              q
- /
-p
- \
-                   o
-                /
-              n
-                \
-                   m
-           /
-         l
-           \
-                   k
-                /
-              j
-                \
-                   i
-      /
-    h
-      \
-                   g
-                /
-              f
-                \
-                   e
-           /
-         d
-           \
-                   c
-                /
-              b
-                \
-                   a
-
-Number of nodes: 26
-Height of the tree: 4
-Balance Factors: p:0 h:0 d:0 b:0 a:0 c:0 f:0 e:0 g:0 l:0 j:0 i:0 k:0 n:0 m:0 o:0 t:-1 r:0 q:0 s:0 x:0 v:0 u:0 w:0 y:-1 z
-:0
-
-
---------------------------------------------------------------------------------------------------
-
-
-Traversals:
-
-Pre-order: p h d b a c f e g l j i k n m o t r q s x v u w y z
-
-In-order: a b c d e f g h i j k l m n o p q r s t u v w x y z
-
-Post-order: a c b e g f d i k j m o n l h q s r u w v z y x t p
-
-Level-order: p h t d l r x b f j n q s v y a c e g i k m o u w z
-
-Level-order by Sam:
-p
-h t
-d l r x
-b f j n q s v y
-a c e g i k m o u w z
 
 
 
-Searching for node 'c': Found
-Searching for node 'm': Found
-
-
---------------------------------------------------------------------------------------------------
-
-Deleting some nodes...
-
-node 'h' - Deleted
-node 'i' - Deleted
-node 'm' - Deleted
-node 'g' - Deleted
-node 't' - Deleted
-node 'a' - Deleted
-node 'z' - Deleted
-node 'x' - Deleted
-
-Deleting node 'm' - Test when a node already do not exist
-
-
-** after deleting - Display the new tree **
-
-         y
-           \
-                   w
-                /
-              v
-      /
-    u
-      \
-              s
-           /
-         r
-           \
-              q
- /
-p
- \
-                   o
-                /
-              n
-           /
-         l
-
-
-           \
-              k
-      /
-    j
-      \
-              f
-                \
-                   e
-           /
-         d
-           \
-                   c
-                /
-              b
-
-Number of nodes: 18
-Height of the tree: 4
-
-Searching for the deleted node 'm': Not Found
-Searching for the deleted node 'g': Not Found
 ```
 ****************************
 ## Authors 
@@ -278,9 +179,9 @@ List of authors/contributors’ names and contact info:
 ****************************
 ## Version History 
 
-* Starter Code Uploaded - April 04, 2024
+* Starter Code Uploaded - April 27, 2024
 
-* CLion Set up - April 05, 2024
+* CLion Set up - April 27, 2024
 
 * Adjusted AVLTrees.h - April 05, 2024
 
@@ -296,7 +197,7 @@ List of authors/contributors’ names and contact info:
 
 * Checking Rotations (Single/Double) - April 09, 2024
 
-* Discussing the project with Professor Tony - April 09, 2024
+* Discussing the project with Prof. Tony - May 02, 2024
 
 * Solved nodeType Typo issue - April 09, 2024
 
@@ -314,9 +215,9 @@ List of authors/contributors’ names and contact info:
 
 * Final Testing - April 12, 2024
 
-* Checking-In with Professor **Tony** - April 15, 2024
+* Checking-In with Professor **Tony** - May 04, 2024
 
-* Uploaded_Final Version - April 15, 2024
+* Uploaded_Final Version - May 04, 2024
 ****************************
 
 ## License
@@ -324,7 +225,7 @@ This project is licensed under the [MIT] License - see the LICENSE file for deta
 ****************************
 ## Acknowledgments
 
-- We acknowledge all the programming input from Professor **Tony Tong** put into this program.
-
+- We acknowledge all the programming input Prof. **Martin Gagné** put into this program.
+- We acknowledge all the programming input from Prof. **Tony Tong** put into this program.
 - We also acknowledge **Sam Hammami** for his hard work and dedication to this project.
 
