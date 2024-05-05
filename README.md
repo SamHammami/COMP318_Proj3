@@ -25,7 +25,7 @@ Developed by Sam Hammami '25
  ```mermaid
 graph TD;
     UserInput<--> Main;
-    Main-->GreedyApproach;
+    Main->-GreedyApproach;
     Main-->DynamicApproach;
     GreedyApproach-->DisplayResults;
     DynamicApproach-->DisplayResults;
