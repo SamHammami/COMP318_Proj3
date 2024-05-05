@@ -24,10 +24,9 @@ Developed by Sam Hammami '25
 ****************************
  ```mermaid
 graph TD;
-    UserInput;
-    GreedyApproach<-->Main;
-    DynamicApproach<-->Main;
-    Main<-->DisplayResults;
+    UserInput<--> Main;
+    GreedyApproach<-->DisplayResults;
+    DynamicApproach<-->DisplayResults;
 ```
 ##### This project contains multiple files that divide the workload.
 - main.cpp: <br>
