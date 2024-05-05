@@ -255,17 +255,17 @@ Dynamic Programming tends to be more time-efficient as the amount increases,
 due to its methodical reuse of computed solutions.
 
   - ***Greedy:*** 𝑂(𝑛)
-  <br>
   The greedy algorithm processes each denomination once, determining how many times each denomination 
   can fit into the remaining amount. Basically, here professor the iterations depend linearly on 
   the number of denominations, the time complexity is linear.
   
   - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛)
-  <br>
   Dynamic Programming for the change-making problem uses a two-dimensional array where 𝑚 is the amount to 
   be changed, and 𝑛 is the number of different denominations. The algorithm iterates over each denomination 
   for each value from 1 to 𝑚, leading to a time complexity that is proportional to the product of the 
   amount and the number of denominations.
+
+<br> <br>
 
 **__** **Space Efficiency** **__** **:**
 <br>
@@ -273,12 +273,10 @@ Although DP requires more memory to store sub-solutions, its space cost can
 be justified by the significantly better outcomes it delivers.
 
   - ***Greedy:*** 𝑂(1)
-  <br>
   Greedy does not require additional space to store sub-solutions, as it only needs to keep track of the 
   number of each denomination used to reach the total amount.
   
   - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛)
-  <br>
     - Worst-case scenario picks the largest denomination 𝑚 or 𝑛 (As we saw in the examples in class)
     <br>
     - Dynamic Programming uses a two-dimensional array to store the sub-solutions, which can be space-intensive 
