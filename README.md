@@ -3,15 +3,15 @@
 
 ## COMP 318 Algorithms - Project 3 
 ### Description - ***Greedy & Dynamic Programming***
-This project explores the design and implementation of algorithms to manage currency distribution effectively, 
-specifically focusing on the greedy and dynamic programming approaches to solve the change-making problem. 
-The project aims to find the most efficient way to combine different denominations to reach a specified total, 
-illustrating the concepts of algorithm optimization and complexity.
+This project explores the design and implementation of algorithms to manage a Tax Amount distribution effectively, 
+specifically focusing on the greedy and dynamic programming approaches to solve the change-making problem.
+The project aims to find the most efficient way to combine different denominations; to reach a specified total with 
+the minimum number of bills, illustrating the concepts of algorithm optimization and complexity.
 
 #### **Highlights of the project:**
 
 * **Interactive User Input:** Allows users to enter a specific amount and observe how each algorithm tackles the change-making problem.
-* **Change-Making Problem:** Calculates the minimum number of bills and coins needed to reach a specific amount using different denominations.
+* **Change-Making Problem:** Calculates the minimum number of bills needed to reach a specific amount using different denominations.
 * **Greedy Algorithm:** Quickly computes a solution by always taking the best immediate or local solution, ensuring rapid execution but not always guaranteeing the best global solution.
 * **Dynamic Programming Algorithm:** Breaks down the problem into simpler subproblems and solves them once, storing their solutions to avoid redundant computations, ensuring an optimal solution is found.
 * **Comparison and Analysis:** Evaluates and compares the efficiency of both algorithms in terms of time and space complexities.
@@ -29,20 +29,26 @@ graph TD;
     Main-->DynamicApproach;
     GreedyApproach-->DisplayResults;
     DynamicApproach-->DisplayResults;
-    DisplayResults<-->UserOutput;
+    DisplayResults-->UserOutput;
 ```
 ##### This project contains multiple files that divide the workload.
-- main.cpp: <br>
-    This file is used to test the AVL Trees implementation. It creates a tree, inserts nodes, displays the tree, and deletes nodes. 
-    It also displays the tree after deletion.
+- **main.cpp:**
+    - This is the primary driver file for the project. It handles user input for specifying the amount of Tax Due for 
+  which invokes both the greedy and dynamic programming algorithms. It is designed to showcase how each algorithm 
+  approaches the calculation of minimum bills required to reach the specified total,
 
-- changeMaker.cpp:<br>
-    This file is used to create the AVL Trees Object Data Structure which holds the nodes of the tree and the methods to manipulate the tree.
+- **changeMaker.cpp:**
+    - Implements the core logic of the greedy and dynamic programming algorithms. This file contains the functions that 
+  directly manage the calculation of minimum bills required to achieve the specified total using both methods.
+  It is crucial for demonstrating the practical application of these algorithms in a real-world financial context.
 
-- changeMaker.h:<br>
-  This is the header file for the AVLtrees.cpp file. It contains the three classes hierarchy (binaryTreeClass, binarySearchTreeClass, balancedBinarySearchTreeClass) and the methods' prototypes. <br>
+- **changeMaker.h:**
+    - This header file declares the functions and structures used in `changeMaker.cpp`. It includes the prototypes 
+  for the greedy and dynamic algorithms, ensuring that `main.cpp` can call these functions appropriately. 
+  The file helps in maintaining a clean and organized code structure, promoting good software development practices.
 
 ****************************
+
 
 ## Getting Started
 
@@ -238,28 +244,12 @@ Which result that dp is always more efficient but sometimes greedy is the same a
 we could see the difference between the two algorithms in larger numbers where dp is more efficient than greedy
 
 
-Time complexity
-
-
-Space complexity
-
-
 Time efficiency
 Space efficiency
 Which approach is better? Why? Is it always the case?
 
 ```
 
-```
-.                        ***     Welcome to The AVL Trees World     ***                    .
-
-
---------------------------------------------------------------------------------------------------
-
-
-
-
-```
 ****************************
 ## Authors 
 List of authors/contributors’ names and contact info:
@@ -313,8 +303,7 @@ List of authors/contributors’ names and contact info:
 This project is licensed under the [MIT] License - see the LICENSE file for details
 ****************************
 ## Acknowledgments
-
 - We acknowledge all the programming input Prof. **Martin Gagné** put into this program.
-- We acknowledge all the programming input from Prof. **Tony Tong** put into this program.
-- We also acknowledge **Sam Hammami** for his hard work and dedication to this project.
+- We also acknowledge all modifications and updates from Prof. **Tony Tong**.
+- Last, we acknowledge **Sam Hammami** for his hard work and dedication to this project.
 
