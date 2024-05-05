@@ -6,6 +6,7 @@
 #include <array> // For Greedy Programming
 #include <vector> // For Dynamic Programming
 #include <cmath> // For INT_MAX
+#include <string> // For string manipulation
 #include <iomanip> // For setw
 
 using namespace std;

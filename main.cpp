@@ -1,15 +1,16 @@
 /* --------------------------------- Wheaton College MA - Spring 2024 ---------------------------------*\
  * Comp 318, programming project 3
  * Sam Hammami '25
+ * **********************************************
+ * Thank you for the great semester, Prof. Tony!
+ * I learned a lot and enjoyed the class.(Safe travel)
+ * **********************************************
  */
 
 #include "changeMaker.h"
 #include <iostream>
-#include <string> // For string manipulation
-
 
 using namespace std;
-
 
                 /*------------------------------Main Function------------------------------*/
 int main() {
@@ -59,7 +60,6 @@ int main() {
     cout << "Best Regards, " << endl;
     cout << "IR$ Support Team" << endl;
     cout << "---------------------------------------------------------------" << endl;
-
 
     return 0;
 }

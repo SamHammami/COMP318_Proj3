@@ -3,30 +3,31 @@
 
 ## COMP 318 Algorithms - Project 3 
 ### Description - ***Greedy & Dynamic Programming***
-This project introduces an implementation of a Balanced Binary Search Tree (BST), specifically an AVL tree, which 
-self-balances to maintain optimal search, insert, and delete operations times.The program offers multiple options to 
-manage a balanced BST effectively, leveraging various algorithms and data structures, including tree nodes, rotation mechanisms, 
-and balanceOurTree factor calculations.
+This project explores the design and implementation of algorithms to manage currency distribution effectively, 
+specifically focusing on the greedy and dynamic programming approaches to solve the change-making problem. 
+The project aims to find the most efficient way to combine different denominations to reach a specified total, 
+illustrating the concepts of algorithm optimization and complexity.
 
 #### **Highlights of the project:**
 
-* **Data Insertion:** Safely inserts data into the tree, guaranteeing the maintenance of BST properties.
-* **Tree Traversals:** Implements and demonstrates in-order, pre-order, post-order, and level-order traversals of the tree.
-* **Tree Visualization:** Displays up to four levels of the tree, providing a clear visual representation of its structure.
-* **Balance Factor Calculation:** Calculates and displays the balanceOurTree factors, crucial for understanding the AVL tree's balanceOurTree.
-* **Single Rotations:** Executes single right and left rotations to maintain AVL tree balanceOurTree after insertions and deletions.
-* **Double Rotations:** Performs left-right and right-left rotations to balanceOurTree more complex imbalances in the tree.
+* **Interactive User Input:** Allows users to enter a specific amount and observe how each algorithm tackles the change-making problem.
+* **Change-Making Problem:** Calculates the minimum number of bills and coins needed to reach a specific amount using different denominations.
+* **Greedy Algorithm:** Quickly computes a solution by always taking the best immediate or local solution, ensuring rapid execution but not always guaranteeing the best global solution.
+* **Dynamic Programming Algorithm:** Breaks down the problem into simpler subproblems and solves them once, storing their solutions to avoid redundant computations, ensuring an optimal solution is found.
+* **Comparison and Analysis:** Evaluates and compares the efficiency of both algorithms in terms of time and space complexities.
+* **Result Visualization:** Displays detailed steps of both algorithms, showing the number of each denomination used and the progress towards the total amount.
 
 Developed by Sam Hammami '25
 
 ****************************
-**Inheritance diagram bla bla:**
+**System Architecture Diagram:**
 ****************************
  ```mermaid
 graph TD;
-    binaryTreeClas<-->binarySearchTreeClass;
-    binarySearchTreeClass<-->balancedBinarySearchTreeClass;
-    balancedBinarySearchTreeClass-->Main.cpp;
+    UserInput<-->Main;
+    GreedyApproach<-->Main;
+    DynamicApproach<-->Main;
+    Main<-->DisplayResults;
 ```
 ##### This project contains multiple files that divide the workload.
 - main.cpp: <br>
@@ -76,12 +77,11 @@ Click the run button - or - Shift + F10
 <br><br>
 <br><br>
 
-#### Run the code - It should be like: 
+### Run the code - It should be like: 
 
+
+#### Sample 1
 ```
-
-
-Sample 1
 ***     Welcome to the IR$ of Banana Republic!     ***
 
 Please enter your name below!
@@ -127,32 +127,119 @@ Remember that IR$ of Banana Republic is always here for you.
 Best Regards,
 IR$ Support Team
 ---------------------------------------------------------------
+```
+#### Sample 2
+```
+***     Welcome to the IR$ of Banana Republic!     ***
 
-Sample 2
+Please enter your name below!
+My Name is Houssem .H
 
+What is your tax $$$ due?
+My Tax Amount Due = $35000
 
+---------------------------------------------------------------
+Plan 1: The Greedy Approach
+Tax Due: $35000
+                Bills         Num                   Subtotal
+                $95000   x    0     = $0            $0
+                $32001   x    1     = $32001        $32001
+                $5001    x    0     = $0            $32001
+                $701     x    4     = $2804         $34805
+                $101     x    1     = $101          $34906
+                $1       x    94    = $94           $35000
 
-Sample 3
+Total number of bills needed: 0 + 1 + 0 + 4 + 1 + 94 = 100
+* -------------------------- ***** ------------------------ *
+Plan 2: The Dynamic Programming Approach
+Tax Due: $35000
+                Bills         Num                   Subtotal
+                $95000   x    0     = $0            $0
+                $32001   x    1     = $32001        $32001
+                $5001    x    0     = $0            $32001
+                $701     x    4     = $2804         $34805
+                $101     x    1     = $101          $34906
+                $1       x    94    = $94           $35000
 
+Total number of bills needed: 0 + 1 + 0 + 4 + 1 + 94 = 100
+---------------------------------------------------------------
+Which payment plan do you want to choose (1 or 2)?
+Plan:1
 
+---------------------------------------------------------------
+Dear  Houssem .H,
 
+Thank you for paying your tax ON TIME, you have chosen Plan 1!
+Remember that IR$ of Banana Republic is always here for you.
 
+Best Regards,
+IR$ Support Team
+---------------------------------------------------------------
+
+```
+
+#### Sample 3
+```
+***     Welcome to the IR$ of Banana Republic!     ***
+
+Please enter your name below!
+My Name is Rich Richard
+
+What is your tax $$$ due?
+My Tax Amount Due = $296005
+
+---------------------------------------------------------------
+Plan 1: The Greedy Approach
+Tax Due: $296005
+                Bills         Num                   Subtotal
+                $95000   x    3     = $285000       $285000
+                $32001   x    0     = $0            $285000
+                $5001    x    2     = $10002        $295002
+                $701     x    1     = $701          $295703
+                $101     x    2     = $202          $295905
+                $1       x    100   = $100          $296005
+
+Total number of bills needed: 3 + 0 + 2 + 1 + 2 + 100 = 108
+* -------------------------- ***** ------------------------ *
+Plan 2: The Dynamic Programming Approach
+Tax Due: $296005
+                Bills         Num                   Subtotal
+                $95000   x    2     = $190000       $190000
+                $32001   x    3     = $96003        $286003
+                $5001    x    2     = $10002        $296005
+                $701     x    0     = $0            $296005
+                $101     x    0     = $0            $296005
+                $1       x    0     = $0            $296005
+
+Total number of bills needed: 2 + 3 + 2 + 0 + 0 + 0 = 7
+---------------------------------------------------------------
+Which payment plan do you want to choose (1 or 2)?
+Plan:2
+
+---------------------------------------------------------------
+Dear  Rich Richard,
+
+Thank you for paying your tax ON TIME, you have chosen Plan 2!
+Remember that IR$ of Banana Republic is always here for you.
+
+Best Regards,
+IR$ Support Team
+---------------------------------------------------------------
+
+```
+
+```
 We could see that always dp < greedy
-
 
 Which result that dp is always more efficient but sometimes greedy is the same as dp
 
 we could see the difference between the two algorithms in larger numbers where dp is more efficient than greedy
 
 
-
-
 Time complexity
 
 
 Space complexity
-
-
 
 
 Time efficiency
