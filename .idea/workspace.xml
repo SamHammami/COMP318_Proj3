@@ -20,9 +20,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddf63c9b-66da-44ef-8ef2-f2981af80c42" name="Changes" comment="saturday update 02:06am">
+    <list default="true" id="ddf63c9b-66da-44ef-8ef2-f2981af80c42" name="Changes" comment="saturday update 08:12pm">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changeMaker.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/changeMaker.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changeMaker.h" beforeDir="false" afterPath="$PROJECT_DIR$/changeMaker.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP318_Proj3.dir/changeMaker.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP318_Proj3.dir/changeMaker.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP318_Proj3.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/COMP318_Proj3.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/COMP318_Proj3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/COMP318_Proj3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +119,7 @@
       <workItem from="1714753361699" duration="5867000" />
       <workItem from="1714801812781" duration="1060000" />
       <workItem from="1714804953019" duration="2782000" />
-      <workItem from="1714857147969" duration="7000" />
+      <workItem from="1714857147969" duration="6279000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <option name="closed" value="true" />
@@ -225,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714802877493</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="saturday update 08:12pm">
+      <option name="closed" value="true" />
+      <created>1714857187530</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714857187530</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +270,7 @@
     <MESSAGE value="Friday update 12:41pm" />
     <MESSAGE value="saturday update 01:48am" />
     <MESSAGE value="saturday update 02:06am" />
-    <option name="LAST_COMMIT_MESSAGE" value="saturday update 02:06am" />
+    <MESSAGE value="saturday update 08:12pm" />
+    <option name="LAST_COMMIT_MESSAGE" value="saturday update 08:12pm" />
   </component>
 </project>
