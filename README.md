@@ -249,7 +249,7 @@ complex scenarios.
 
 
 ### 2) My analysis:
-<br> <br>
+<br>
 
 **__** **Time Efficiency** **__** **:**
 <br>
@@ -298,7 +298,7 @@ For smaller amounts (Sample 2):
     <br>
     - The **greedy approach** excels in scenarios where simplicity and speed are paramount (e.g., small amounts), 
     offering 𝑂(𝑛)time complexity and 𝑂(1) space complexity.
-    <br>
+  
     => This makes it ideal for quick calculations and situations where an approximate solution is acceptable.
     <br> <br>
 
@@ -307,7 +307,7 @@ For smaller amounts (Sample 2):
     - The **dynamic programming approach** is preferable for high-stake, large amount scenarios 
   where precision is crucial and the minimal use of bills is essential. But it has a higher time
   complexity of 𝑂(𝑚 x 𝑛) and space complexity of 𝑂(𝑚 x 𝑛)
-    <br>
+
   => Despite its higher computational and memory demands, it ensures the optimal solution is found, 
   making it the best choice.
 
