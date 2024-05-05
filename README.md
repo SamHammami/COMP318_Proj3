@@ -27,6 +27,7 @@ graph TD;
     UserInput<--> Main;
     GreedyApproach<-->DisplayResults;
     DynamicApproach<-->DisplayResults;
+    DisplayResults<-->UserOutput;
 ```
 ##### This project contains multiple files that divide the workload.
 - main.cpp: <br>
