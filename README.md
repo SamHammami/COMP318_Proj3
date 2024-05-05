@@ -33,17 +33,20 @@ graph TD;
 ```
 ##### This project contains multiple files that divide the workload.
 - **main.cpp:**
-    - This is the primary driver file for the project. It handles user input for specifying the amount of Tax Due for 
+<br>
+  This is the primary driver file for the project. It handles user input for specifying the amount of Tax Due for 
   which invokes both the greedy and dynamic programming algorithms. It is designed to showcase how each algorithm 
   approaches the calculation of minimum bills required to reach the specified total,
 
 - **changeMaker.cpp:**
-    - Implements the core logic of the greedy and dynamic programming algorithms. This file contains the functions that 
+<br>
+  Implements the core logic of the greedy and dynamic programming algorithms. This file contains the functions that 
   directly manage the calculation of minimum bills required to achieve the specified total using both methods.
   It is crucial for demonstrating the practical application of these algorithms in a real-world financial context.
 
 - **changeMaker.h:**
-    - This header file declares the functions and structures used in `changeMaker.cpp`. It includes the prototypes 
+<br>
+  This header file declares the functions and structures used in `changeMaker.cpp`. It includes the prototypes 
   for the greedy and dynamic algorithms, ensuring that `main.cpp` can call these functions appropriately. 
   The file helps in maintaining a clean and organized code structure, promoting good software development practices.
 
@@ -86,9 +89,12 @@ Click the run button - or - Shift + F10
 <br><br>
 
 ### Run the code - It should be like: 
+This section provides 3 three sample runs to demonstrate the behavior of both the greedy and dynamic programming 
+algorithms under various scenarios, illustrating their efficiency in handling different tax amounts.
 
 
-#### Sample 1
+#### _ Sample 1 _
+
 ```
 ***     Welcome to the IR$ of Banana Republic!     ***
 
@@ -136,7 +142,7 @@ Best Regards,
 IR$ Support Team
 ---------------------------------------------------------------
 ```
-#### Sample 2
+#### __ Sample 2 __
 ```
 ***     Welcome to the IR$ of Banana Republic!     ***
 
@@ -185,8 +191,7 @@ IR$ Support Team
 ---------------------------------------------------------------
 
 ```
-
-#### Sample 3
+#### ____ Sample 3 ____
 ```
 ***     Welcome to the IR$ of Banana Republic!     ***
 
@@ -236,19 +241,80 @@ IR$ Support Team
 
 ```
 
-```
-We could see that always dp < greedy
+### 1) My interpretation:
 
-Which result that dp is always more efficient but sometimes greedy is the same as dp
+For large amounts, the DP approach consistently outperforms Greedy (see sample 1 and 3) in terms 
+of the number of bills, highlighting its scalability and effectiveness in handling larger and more 
+complex scenarios.
 
-we could see the difference between the two algorithms in larger numbers where dp is more efficient than greedy
+
+### 2) My analysis:
+**__** **Time Efficiency** **__** **:**
+<br>
+Dynamic Programming tends to be more time-efficient as the amount increases, 
+due to its methodical reuse of computed solutions.
+
+  - ***Greedy:*** 𝑂(𝑛)
+  <br>
+  The greedy algorithm processes each denomination once, determining how many times each denomination 
+  can fit into the remaining amount. Basically, here professor the iterations depend linearly on 
+  the number of denominations, the time complexity is linear.
+  
+  - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛)
+  <br>
+  Dynamic Programming for the change-making problem uses a two-dimensional array where 𝑚 is the amount to 
+  be changed, and 𝑛 is the number of different denominations. The algorithm iterates over each denomination 
+  for each value from 1 to 𝑚, leading to a time complexity that is proportional to the product of the 
+  amount and the number of denominations.
+
+**__** **Space Efficiency** **__** **:**
+<br>
+Although DP requires more memory to store sub-solutions, its space cost can
+be justified by the significantly better outcomes it delivers.
+
+  - ***Greedy:*** 𝑂(1)
+  <br>
+  Greedy does not require additional space to store sub-solutions, as it only needs to keep track of the 
+  number of each denomination used to reach the total amount.
+  
+  - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛)
+  <br>
+    - Worst-case scenario picks the largest denomination 𝑚 or 𝑛 (As we saw in the examples in class)
+    <br>
+    - Dynamic Programming uses a two-dimensional array to store the sub-solutions, which can be space-intensive 
+    for larger amounts. The space complexity is proportional to the amount to be changed, 𝑚, as it needs to 
+    store the solutions for each value from 1 to 𝑚.
 
 
-Time efficiency
-Space efficiency
-Which approach is better? Why? Is it always the case?
+### 3) My conclusion:
 
-```
+- **Optimal Approach:** 
+Dynamic Programming is generally better because it guarantees the optimal
+  solution by considering all possible combinations, unlike Greedy, which can fail in complex scenarios.
+
+
+- **Recommendation:**
+    <br> <br>
+For smaller amounts (Sample 2):
+    <br>
+    - The **greedy approach** excels in scenarios where simplicity and speed are paramount (e.g., small amounts), 
+    offering 𝑂(𝑛)time complexity and 𝑂(1) space complexity.
+    <br> <br>
+    => This makes it ideal for quick calculations and situations where an approximate solution is acceptable.
+    <br> <br>
+
+  For larger amounts (Sample 1 and 3):
+    <br>
+    - The **dynamic programming approach** is preferable for high-stake, large amount scenarios 
+  where precision is crucial and the minimal use of bills is essential. But it has a higher time
+  complexity of 𝑂(𝑚 x 𝑛) and space complexity of 𝑂(𝑚 x 𝑛)
+    <br> <br>
+  => Despite its higher computational and memory demands, it ensures the optimal solution is found, 
+  making it the best choice.
+
+
+
+
 
 ****************************
 ## Authors 
@@ -262,39 +328,27 @@ List of authors/contributors’ names and contact info:
 
 * CLion Set up - April 27, 2024
 
-* Adjusted AVLTrees.h - April 05, 2024
+* Adjusted changeMaker.h - April 28, 2024
 
-* Completed 1st Class (BT) - April 06, 2024
+* Completed Greedy Approach - April 30, 2024
 
-* Some work on Main.cpp - April 06, 2024
+* Some work on Main.cpp - April 30, 2024
 
-* Planning Binary Search Tree Class - April 06, 2024
-
-* Developed 2nd Class (BST) - April 07, 2024
-
-* Started Implementing 3rd Class (B_BST) - April 07, 2024
-
-* Checking Rotations (Single/Double) - April 09, 2024
+* Planning Dynamic Approach (Book. Chap 8) - May 01, 2024
 
 * Discussing the project with Prof. Tony - May 02, 2024
 
-* Solved nodeType Typo issue - April , 2024
+* Developed Dynamic Approach - May 02, 2024
 
-* Completed the 2nd Class (BST) - April 10, 2024
+* Solved (DP) Approach Issue - May 03, 2024
 
-* Discussed my AVLtrees.cpp/.h with Peer Tutor.h - April 10, 2024
+* Testing Main.cpp (Specific Cases, Display, Delete) - May 03, 2024
 
-* Solved some issues & More work on Main.cpp - April 10, 2024
+* Checking-In with Professor **Tony** - May 03, 2024
 
-* Completed the 3rd Class (B_BST) - April 11, 2024
+* Commenting the code (Sam style) - May 04, 2024
 
-* Testing Main.cpp (Specific Cases, Display, Delete) - April 11, 2024
-
-* Commenting the code (Sam style) - April 12, 2024
-
-* Final Testing - April 12, 2024
-
-* Checking-In with Professor **Tony** - May 04, 2024
+* Final Testing - May 04, 2024
 
 * Uploaded_Final Version - May 04, 2024
 ****************************
