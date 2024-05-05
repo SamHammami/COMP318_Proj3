@@ -265,7 +265,7 @@ due to its methodical reuse of computed solutions.
   for each value from 1 to 𝑚, leading to a time complexity that is proportional to the product of the 
   amount and the number of denominations.
 
-<br> <br>
+<br>
 
 **__** **Space Efficiency** **__** **:**
 <br>
@@ -278,7 +278,6 @@ be justified by the significantly better outcomes it delivers.
   
   - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛)
     - Worst-case scenario picks the largest denomination 𝑚 or 𝑛 (As we saw in the examples in class)
-    <br>
     - Dynamic Programming uses a two-dimensional array to store the sub-solutions, which can be space-intensive 
     for larger amounts. The space complexity is proportional to the amount to be changed, 𝑚, as it needs to 
     store the solutions for each value from 1 to 𝑚.
