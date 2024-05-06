@@ -262,10 +262,10 @@ due to its methodical reuse of computed solutions.
   the number of denominations, the time complexity is linear.
   
   - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛)
-  Dynamic Programming for the change-making problem uses a two-dimensional array where 𝑚 is the amount to 
-  be changed, and 𝑛 is the number of different denominations. The algorithm iterates over each denomination 
-  for each value from 1 to 𝑚, leading to a time complexity that is proportional to the product of the 
-  amount and the number of denominations.
+  The dynamic programming it iterates over each denomination
+  for each value from 1 to 𝑚. Here 𝑚 is the amount to be changed, and 𝑛 is the number of different denominations. 
+Leading to a time complexity that is proportional to the product of the amount and the number of denominations.
+
 
 <br>
 
@@ -280,9 +280,9 @@ be justified by the significantly better outcomes it delivers.
   
   - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛)
     - Worst-case scenario picks the largest denomination 𝑚 or 𝑛 (As we saw in the examples in class)
-    - Dynamic Programming uses a two-dimensional array to store the sub-solutions, which can be space-intensive 
-    for larger amounts. The space complexity is proportional to the amount to be changed, 𝑚, as it needs to 
-    store the solutions for each value from 1 to 𝑚.
+    - Dynamic Programming uses vector of vectors (simulating a two-dimensional array) to store the sub-solutions, 
+    which can be space-intensive for larger amounts. The space complexity is proportional to the amount to be changed, 
+    𝑚, as it needs to store the solutions for each value from 1 to 𝑚.
 
 
 ### 3) My conclusion:

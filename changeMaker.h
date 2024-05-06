@@ -13,9 +13,8 @@ using namespace std;
 
 // Class to store the plan of bills and the total number of bills
 class ChangePlan {
-    // No need for private members since we are using a struct
-    // But better to use private members then call them
-    // Using getters and setters instead of public members
+    // No need for private members since we are using a class
+    // But better to use private members then call using getters and setters instead of public members
 public:
     array<int, 6> plan; // The plan of bills
     int totalBills; // Total number of bills

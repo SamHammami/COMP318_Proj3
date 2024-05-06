@@ -19,17 +19,16 @@
 
 array<int, 6> greedyPlan(int taxAmount, const array<int, 6> &denominations){
 
-//    // Array of denominations
-//    const int denominations[6] = {95000, 32001, 5001, 701, 101, 1} ;
-
     // Array to store the plan
     array<int, 6> plan = {0}; // Initialize all elements to 0
 
+    // Loop through the denominations to calculate the greedy plan
     for (int i = 0; i < 6; ++i) {
-        plan[i] = taxAmount / denominations[i];
-        taxAmount %= denominations[i];
+        plan[i] = taxAmount / denominations[i]; // Calculate the number of bills
+        taxAmount %= denominations[i]; // Update the tax amount
     }
 
+    // Return the plan for the given tax amount (greedy)
     return plan;
 }
 
@@ -47,37 +46,35 @@ array<int, 6> greedyPlan(int taxAmount, const array<int, 6> &denominations){
 
 ChangePlan dynamicPlan(int taxAmount, const array<int, 6> &denominations) {
 
-//     Array of denominations
-//    const int denominations[6] = {95000, 32001, 5001, 701, 101, 1};
-
     // Vector of ChangePlan objects
     vector<ChangePlan> dynamic(taxAmount + 1);
 
-    // Base case
+    // Initialize the dynamic plan
     dynamic[0].totalBills = 0;
     dynamic[0].plan.fill(0);
 
+    // Loop through the tax amount to calculate the dynamic plan
     for (int i = 1; i <= taxAmount; ++i) {
+
+        // Initialize the total number of bills to a large value
         dynamic[i].totalBills = INT_MAX;
 
+        // Loop through the denominations
         for (int j = 0; j < 6; ++j) {
-
-            if (i >= denominations[j]) {
+            // Helper variable to calculate the total number of bills
+            if (i >= denominations[j]) { // If the current amount is greater than the denomination
                 ChangePlan newSolution = dynamic[i - denominations[j]];
                 newSolution.totalBills++;
                 newSolution.plan[j]++;
-
-                if (newSolution.totalBills < dynamic[i].totalBills) {
+                // Update the minimum number of bills for the current amount
+                if (newSolution.totalBills < dynamic[i].totalBills) { // If the new solution is better
                     dynamic[i] = newSolution;
                 }
-                // Helper variable to calculate the total number of bills
             }
-            //dynamic[i].totalBills += dynamic[i - denominations[j]].totalBills;
         }
-        //dynamic[i].totalBills = min(dynamic[i].totalBills, dynamic[i - denominations[j]].totalBills);
     }
-
-    return dynamic[taxAmount]; // Return the plan for the given tax amount (dynamic)
+    // Return the plan for the given tax amount (dynamic)
+    return dynamic[taxAmount];
 }
 
 
@@ -86,7 +83,13 @@ ChangePlan dynamicPlan(int taxAmount, const array<int, 6> &denominations) {
                                 /*------- Greedy Approach -------*/
 /* --- void displayGreedyApproach(...) ---
  * Description:
- * - This function displays the greedy approach for the given tax amount.
+ * - This function displays the 'greedy approach' with some specific format.
+ * - It displays:
+ *      - The tax amount due
+ *      - The number each denomination
+ *      - The number of bills
+ *      - The subtotal for each denomination
+ *      - The total number of bills needed
  *
  * Parameters:
  * - int taxAmount: The tax amount due
@@ -139,7 +142,13 @@ void displayGreedyApproach(int taxAmount, const array <int, 6> &denominations) {
                             /*------- Dynamic Approach -------*/
 /* --- void displayDynamicApproach(...) ---
  * Description:
- * - This function displays the dynamic approach for the given tax amount.
+ * - This function displays the 'dynamic approach' with some specific format.
+ * - It displays:
+ *     - The tax amount due
+ *     - The number each denomination
+ *     - The number of bills
+ *     - The subtotal for each denomination
+ *     - The total number of bills needed
  *
  * Parameters:
  * - int taxAmount: The tax amount due
@@ -161,6 +170,7 @@ void displayDynamicApproach(int taxAmount, const array <int, 6> &denominations) 
 
     int subtotalDynamic = 0;
     string storeDynamicBills;
+    int totalBillsDynamic = 0;
 
     // Loop through the dynamic result
     for (size_t i = 0; i < dynamicResult.plan.size(); ++i) { //dynamicResult.plan.size()= 6 -> from dynamicPlan function
@@ -178,7 +188,10 @@ void displayDynamicApproach(int taxAmount, const array <int, 6> &denominations) 
         storeDynamicBills += to_string(num);
         cout << " $" << subtotalDynamic << endl;
 
+        // Helper variable to calculate the total number of bills
+        totalBillsDynamic += num;
+
     }
     // Display the total number of bills one by one (Dynamic)
-    cout << endl << "Total number of bills needed: " << storeDynamicBills << " = " << dynamicResult.totalBills << endl;
+    cout << endl << "Total number of bills needed: " << storeDynamicBills << " = " << totalBillsDynamic << endl;
 }
