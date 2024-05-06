@@ -278,7 +278,7 @@ be justified by the significantly better outcomes it delivers.
   Greedy does not require additional space to store sub-solutions, as it only needs to keep track of the 
   number of each denomination used to reach the total amount.
   
-  - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛) <br>
+  - ***Dynamic Programming:*** 𝑂(𝑚 x 𝑛) 
     - Worst-case scenario picks the largest denomination 𝑚 or 𝑛 (As we saw in the examples in class)
     - Dynamic Programming uses vector of vectors (simulating a two-dimensional array) to store the sub-solutions, 
     which can be space-intensive for larger amounts. The space complexity is proportional to the amount to be changed, 
